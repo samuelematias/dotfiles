@@ -62,9 +62,9 @@ echo "🔗 Linking configuration files..."
 sh $CONFIG_DIR/osx/tasks/symlink.sh
 echo "✅ Successful linked configuration files"
 
-echo "🔗 Setting NVIM..."
+echo "🔗 Setting Neovim..."
 sh $CONFIG_DIR/osx/tasks/nvim.sh
-echo "✅ Successful setting NVIM"
+echo "✅ Successful setting Neovim"
 
 echo "📲 Running Xcode commands..."
 sh $CONFIG_DIR/osx/tasks/xcode.sh
