@@ -1,0 +1,43 @@
+# Easier ways to navigate trough directories
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+alias -- -="cd -"
+alias ws="cd $HOME/workspace"
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Brew
+alias cask='brew cask' # i <3 u cask
+
+# ls substitute
+alias ls='exa'
+alias ll='exa -l'
+alias lll='exa -l | less'
+alias lla='exa -la'
+alias llt='exa -T'
+alias llfu='exa -bghHliS --git'
+
+# Shortcuts
+alias g="git"
+alias v="vim"
+
+# File size
+alias fs="stat -f \"%z bytes\""
+
+# Clear current node_modules
+alias clearnodemodules="rm -rf node_modules"
+
+# Update installed Ruby gems, Homebrew, npm, and their installed packages
+alias brewupdate="brew -v update; brew upgrade --force-bottle; brew cleanup; brew doctor"
+
+# Turn on/off sound
+# http://xkcd.com/530/
+alias stfu="osascript -e 'set volume output muted true'"
+alias pumpitup="osascript -e 'set volume output volume 100'"
+
+# Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"

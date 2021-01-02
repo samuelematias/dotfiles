@@ -1,0 +1,91 @@
+[user]
+  name = Samuel Matias
+  email = hi@samuelematias.com
+
+[github]
+  user = samuelematias
+
+[core]
+  excludesfile = ~/.gitignore_global
+  attributesfile = ~/.gitattributes
+  ignorecase = false
+
+[init]
+  defaultBranch = main
+
+[push]
+  default = current
+
+[pull]
+  rebase = true
+
+[commit]
+  verbose = true
+  template = ~/.gittemplates/commit
+
+[alias]
+  a = add --all
+  ap = add . -p
+  #############
+  b = branch
+  bd = branch -d
+  bdd = branch -D
+  br = branch -r
+  #############
+  c = commit
+  cm = commit -m
+  ca = commit --amend
+  cma = !git add -A . && git commit -m
+  #############
+  cp = cherry-pick
+  cpa = cherry-pick --abort
+  cpc = cherry-pick --continue
+  #############
+  co = checkout
+  cob = checkout -b
+  #############
+  d = difftool
+  df = diff --color --color-words --abbrev
+  #############
+  l  = log --pretty=format:'%C(red)%h%Creset -%C(yellow)%d%Creset %s %C(green)(%cr) %C(bold blue)<%an>%Creset'
+  lc = log -1 --stat
+  lg = log --color --graph --pretty=format:'%C(red)%h%Creset -%C(yellow)%d%Creset %s %C(green)(%cr) %C(bold blue)<%an>%Creset'
+  #############
+  m = merge
+  ma = merge --abort
+  mc = merge --continue
+  ms = merge --skip
+  #############
+  pr = prune -v
+  #############
+  ps = push
+  psf = push -f
+  psu = push -u
+  pst = push --tags
+  #############
+  po = pull origin
+  poh = pull origin HEAD
+  pom = pull origin main
+  pomr = pull origin master
+  pod = pull origin dev
+  podt = pull origin development
+  pos = pull origin staging
+  #############
+  rb = rebase
+  rba = rebase --abort
+  rbc = rebase --continue
+  rbi = rebase --interactive
+  rbs = rebase --skip
+  #############
+  st = status
+  #############
+  sh = stash
+  shl = stash list
+  sha = stash apply
+  shc = stash clear
+  #############
+  sm = submodule
+  sma = submodule add
+  smu = submodule update --recursive --remote --merge
+  #############
+  aliases = config --get-regexp alias
