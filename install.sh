@@ -79,5 +79,5 @@ echo "⚡️ All right! Restart your machine to complete the configuration."
 
 # Restart macOS immediately
 echo "🖥 Rebooting macOS immediately"
-sudo shutdown -r now
+sudo reboot
 echo "✅ Successful Reboot macOS command"
