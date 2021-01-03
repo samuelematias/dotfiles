@@ -70,18 +70,13 @@ echo "📲 Running Xcode commands..."
 sh $CONFIG_DIR/osx/tasks/xcode.sh
 echo "✅ Successful runned Xcode commands"
 
-# Install configurations from zsh
-echo "🔧 Setting configuration to zsh..."
-source $HOME/.zshrc
-echo "✅ Successful configured zsh"
-
-echo "📲 Installing Oh My Zsh..."
-sh $CONFIG_DIR/osx/tasks/ohmyzsh.sh
-echo "✅ Successful installed Oh My Zsh"
-
 # Add default apps to Dock
 echo "🖥 Setting apps to Mac dock..."
 sh $CONFIG_DIR/osx/tasks/dock.sh
 echo "✅ Successful set apps to Mac dock"
+
+echo "📲 Installing Oh My Zsh..."
+sh $CONFIG_DIR/osx/tasks/ohmyzsh.sh
+echo "✅ Successful installed Oh My Zsh"
 
 echo "⚡️ All right! Restart your machine to complete the configuration."
