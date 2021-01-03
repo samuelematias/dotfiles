@@ -76,3 +76,8 @@ sh $CONFIG_DIR/osx/tasks/dock.sh
 echo "✅ Successful set apps to Mac dock"
 
 echo "⚡️ All right! Restart your machine to complete the configuration."
+
+# Restart macOS immediately
+echo "🖥 Rebooting macOS immediately"
+sudo shutdown -r now
+echo "✅ Successful Reboot macOS command"
