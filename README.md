@@ -28,13 +28,39 @@ git clone git://github.com/samuelematias/dotfiles.git ~/.dotfiles
 ```bash
 sh ~/.dotfiles/install.sh
 ```
+## Oh My Zsh
 
-- At the end (after you have run the entire script), execute this command:
+At the end (after you have run the entire script), if you wanna install [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh), follow this steps below:
+
+- Clone Oh My Zsh:
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+- If you use [powerlevel10k](github.com/romkatv/powerlevel10k) theme (I use!), execute this:
+
+```bash
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+
+- Remove the default .zshrc created by clone the [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh):
+
+```bash
+rm ~/.zshrc
+```
+
+- Get you `.zshrc` from zsh folder:
+
+```bash
+sh ~/.dotfiles/osx/tasks/zsh_symlink.sh
+```
+
+- Refresh you `.zshrc`:
 
 ```bash
 source ~/.zshrc
 ```
-
 ## fzf
 
 To enable the FZF in command line you need to follow [this guide](https://github.com/junegunn/fzf#installation).

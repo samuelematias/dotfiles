@@ -75,8 +75,4 @@ echo "🖥 Setting apps to Mac dock..."
 sh $CONFIG_DIR/osx/tasks/dock.sh
 echo "✅ Successful set apps to Mac dock"
 
-echo "📲 Installing Oh My Zsh..."
-sh $CONFIG_DIR/osx/tasks/ohmyzsh.sh
-echo "✅ Successful installed Oh My Zsh"
-
-echo "⚡️ All right! Now execute this command `source ~/.zshrc` and Restart your machine to complete the configuration."
+echo "⚡️ All right! Restart your machine to complete the configuration."
