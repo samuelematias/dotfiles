@@ -45,7 +45,6 @@ brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
 
 # Install useful packages/binaries
-brew install zsh
 brew install exa
 brew install fd
 brew install fzf
