@@ -27,7 +27,7 @@ export ZSH="/Users/samuelematias/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git autojump brew)
+plugins=(git brew)
 
 source $ZSH/oh-my-zsh.sh
 
