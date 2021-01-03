@@ -29,6 +29,12 @@ git clone git://github.com/samuelematias/dotfiles.git ~/.dotfiles
 sh ~/.dotfiles/install.sh
 ```
 
+- At the end (after you have run the entire script), execute this command:
+
+```bash
+source ~/.zshrc
+```
+
 ## fzf
 
 To enable the FZF in command line you need to follow [this guide](https://github.com/junegunn/fzf#installation).
