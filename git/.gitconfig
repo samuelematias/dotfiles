@@ -89,3 +89,6 @@
   smu = submodule update --recursive --remote --merge
   #############
   aliases = config --get-regexp alias
+  #############
+  rollback = reset --soft HEAD~1
+
