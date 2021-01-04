@@ -32,6 +32,11 @@ sh ~/.dotfiles/install.sh
 
 At the end (after you have run the entire script), if you wanna install [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh), follow this steps below:
 
+- Delete de zsh folder:
+```bash
+ rm -r /usr/local/share/zsh
+```
+
 - Clone Oh My Zsh:
 
 ```bash
@@ -44,7 +49,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
-- Remove the default .zshrc created by clone the [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh):
+- Remove the `.zshrc` backup file created by clone the [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh):
+
+```bash
+rm ~/.zshrc.pre-oh-my-zsh
+```
+
+- Remove the default `.zshrc` created by clone the [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh):
 
 ```bash
 rm ~/.zshrc
