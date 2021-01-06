@@ -27,7 +27,7 @@ export ZSH="/Users/samuelematias/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git brew)
+plugins=(git brew autojump)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,6 +88,8 @@ SPACESHIP_USER_SHOW=always
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_CHAR_SYMBOL="❯"
 SPACESHIP_CHAR_SUFFIX=" "
+
+bindkey '       ' autosuggest-accept
 
 # Simplify prompt if we're using Hyper
 if [[ "$TERM_PROGRAM" == "Hyper" ]]; then
