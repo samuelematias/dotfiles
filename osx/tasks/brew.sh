@@ -64,7 +64,6 @@ brew install z
 brew install bitwarden-cli
 brew install python
 brew install scrcpy
-brew install autojump
 
 # Install cask packages
 brew install --cask alacritty
