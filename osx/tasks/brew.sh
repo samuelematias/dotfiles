@@ -48,6 +48,7 @@ brew install --cask font-fira-code
 brew install exa
 brew install fd
 brew install fzf
+brew install ripgrep
 brew install gnu-sed
 brew install gpatch
 brew install mas
