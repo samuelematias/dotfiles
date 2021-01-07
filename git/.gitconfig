@@ -16,9 +16,6 @@
 [push]
   default = current
 
-[pull]
-  rebase = true
-
 [commit]
   verbose = true
   template = ~/.gittemplates/commit
@@ -69,6 +66,7 @@
   pomr = pull origin master
   pod = pull origin dev
   podt = pull origin development
+  podp = pull origin develop
   pos = pull origin staging
   #############
   rb = rebase
