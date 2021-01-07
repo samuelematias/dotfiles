@@ -213,3 +213,11 @@ function! RipgrepFzf(query, fullscreen)
     let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
     call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
 endfunction
+
+" coc
+" list of the extensions to make sure are always installed
+let g:coc_global_extensions = [
+            \'coc-snippets',
+            \'coc-git',
+            \'coc-flutter',
+            \]
