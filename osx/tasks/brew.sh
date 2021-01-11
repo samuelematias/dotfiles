@@ -64,6 +64,7 @@ brew install z
 brew install bitwarden-cli
 brew install python
 brew install scrcpy
+brew install tmuxinator
 
 # Install cask packages
 brew install --cask alacritty
@@ -74,14 +75,14 @@ brew install --cask spotify
 brew install --cask bitwarden
 brew install --cask 1password
 brew install --cask telegram
-brew install --cask alfred 
-brew install --cask kap 
-brew install --cask visual-studio-code 
-brew install --cask sublime-text 
-brew install --cask vivaldi 
-brew install --cask oracle-jdk 
-brew install --cask android-studio 
-brew install --cask flutter 
+brew install --cask alfred
+brew install --cask kap
+brew install --cask visual-studio-code
+brew install --cask sublime-text
+brew install --cask vivaldi
+brew install --cask oracle-jdk
+brew install --cask android-studio
+brew install --cask flutter
 brew install --cask sizeup
 brew install --cask notion
 brew install --cask cleanmymac
