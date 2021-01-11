@@ -1,0 +1,18 @@
+# /Users/samuelematias/.config/tmuxinator/ifood-partner-flutter.yml
+
+name: ifood-partner-flutter
+root: ~/workspace/job/ifood/ifood-partner-flutter
+
+windows:
+  - vim: vim
+  - git:
+      layout: main-horizontal
+      panes:
+        - vagrant:
+          - git status
+          - git pull
+  - ping:
+      layout: main-horizontal
+      panes:
+          - ping www.google.com.br
+          - fast --upload
