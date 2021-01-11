@@ -1,0 +1,11 @@
+# /Users/samuelematias/.config/tmuxinator/ping
+
+name: ping
+root: ~/
+
+windows:
+  - ping:
+      layout: main-horizontal
+      panes:
+          - ping www.google.com.br
+          - fast --upload

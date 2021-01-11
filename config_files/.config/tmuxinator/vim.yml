@@ -1,0 +1,12 @@
+# /Users/samuelematias/.config/tmuxinator/vim
+
+name: vim
+root: ~/
+
+windows:
+  - vim: vim
+  - ping:
+      layout: main-horizontal
+      panes:
+          - ping www.google.com.br
+          - fast --upload
