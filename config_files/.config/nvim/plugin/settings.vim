@@ -1,6 +1,3 @@
-" Keybindings (that line down)
-let mapleader="\<space>"
-
 syntax enable
 set laststatus=2                    " keep last status, useful for function signatures
 set noshowmode                      " don't display insert/normal/visual mode, we have a status line for that
@@ -41,10 +38,31 @@ set hlsearch                        " highlight all search matches
 set textwidth=79                    " max width
 set formatoptions+=j                " remove comment characters when joining lines
 set formatoptions+=n                " indent numbered lists
-set colorcolumn=120                 " display a column after 120
+set colorcolumn=80                 " display a column after 120
 
 set foldmethod=indent               " fold with indentation method
 set foldlevelstart=99               " no initial folding
 
-set updatetime=100                 " when to execute CursorHold
 set mouse=a                         " enable mouse support
+
+" Some ThePrimeagen sets
+set guicursor=
+set nohlsearch
+set noerrorbells
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set incsearch
+set termguicolors
+set signcolumn=yes
+
+" Give more space for displaying messages.
+set cmdheight=2
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=50
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
