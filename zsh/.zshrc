@@ -118,6 +118,7 @@ zinit light zsh-users/zsh-completions
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 alias vim=nvim
+alias ls=exa -l
 alias fat='flutter analyze && flutter test'
 alias fwt='ls test/**/*_test.dart | entr -c -d flutter test /_'
 alias python=/usr/local/bin/python3.9
