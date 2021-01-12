@@ -22,6 +22,8 @@ nnoremap <leader>bl :BLines<CR>
 nnoremap <leader>bd :bd<space><C-z>
 nnoremap <leader>bq :bp <bar> bd! #<cr> " close current buffer
 nnoremap <leader>ba :bufdo bd!<cr> " close all open buffers
+nnoremap <M-Tab> :bn<CR> " Switching between files (Next)
+nnoremap <M-S-Tab> :bp<CR> " Switching between files (Previous)
 
 " Terminal stuff
 :tnoremap <Esc> <C-\><C-n>
