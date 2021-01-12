@@ -42,8 +42,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
  " cool start up screen
 Plug 'mhinz/vim-startify'
 
-"MarkDown Preview for VIM
+" MarkDown Preview for VIM
   Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
+" Helper to close buffers
+Plug 'Asheq/close-buffers.vim'
 
 call plug#end()
 
