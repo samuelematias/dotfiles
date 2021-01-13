@@ -33,3 +33,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Helper close buffer
 nnoremap <silent> <C-w> :Bdelete menu<CR>
+
+" set semicolon on the end of line
+nnoremap <leader>; A;<esc>
