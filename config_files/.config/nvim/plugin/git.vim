@@ -11,4 +11,5 @@ nnoremap <leader>gvc :GV!<CR>
 nnoremap <leader>gvq :GV?<CR>
 nnoremap <leader>gw :Gwrite<CR>
 nnoremap <leader>gbr :GBranches<CR>
-nnoremap <leader>ga :Git fetch --all<CR>
+nnoremap <leader>gf :Git fetch --all<CR>
+nnoremap <leader>ga :Git add .<CR>
