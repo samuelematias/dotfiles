@@ -32,7 +32,7 @@ nnoremap <M-S-Tab> :bp<CR> " Switching between files (Previous)
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Helper close buffer
-nnoremap <silent> <C-w> :Bdelete menu<CR>
+nnoremap <silent> <C-q> :Bdelete menu<CR>
 
 " set semicolon on the end of line
 nnoremap <leader>; A;<esc>
