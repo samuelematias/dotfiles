@@ -13,7 +13,7 @@ echo "🔧 Setting up your Mac..."
 sudo chsh -s $(which zsh)
 
 # Set macOS preferences
-sh $CONFIG_DIR/osx/.default_config
+# sh $CONFIG_DIR/osx/.default_config
 
 # Install non-brew various tools (PRE-BREW Installs)
 echo "Ensuring build/install tools are available"
