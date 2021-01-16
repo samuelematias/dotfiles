@@ -80,6 +80,7 @@ brew install --cask kap
 brew install --cask visual-studio-code
 brew install --cask sublime-text
 brew install --cask vivaldi
+brew install --cask google-chrome
 brew install --cask oracle-jdk
 brew install --cask android-studio
 brew install --cask flutter
