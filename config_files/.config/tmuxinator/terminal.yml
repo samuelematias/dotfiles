@@ -1,6 +1,6 @@
-# /Users/samuelematias/.config/tmuxinator/ping
+# /Users/samuelematias/.config/tmuxinator/terminal
 
-name: ping
+name: terminal
 root: ~/
 
 windows:
