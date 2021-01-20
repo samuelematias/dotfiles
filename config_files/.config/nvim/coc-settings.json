@@ -1,5 +1,4 @@
 {
-  // coc setting
   "codeLens.enable": true,
   "suggest.echodocSupport": true,
   "diagnostic.virtualText": true,
@@ -9,8 +8,6 @@
     "javascript",
     "markdown"
   ],
-
- // coc-flutter
-"flutter.openDevLogSplitCommand": "botright 10split",
-"flutter.lsp.initialization.onlyAnalyzeProjectsWithOpenFiles": false
+  "flutter.openDevLogSplitCommand": "botright 10split",
+  "flutter.lsp.initialization.onlyAnalyzeProjectsWithOpenFiles": false
 }
