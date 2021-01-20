@@ -32,7 +32,11 @@ Plug 'preservim/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } |
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Vim LSC
+Plug 'natebosch/vim-lsc'
+
 " Dart plugins
+Plug 'natebosch/vim-lsc-dart'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'natebosch/dartlang-snippets'
 
