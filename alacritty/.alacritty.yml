@@ -81,5 +81,5 @@ cursor:
   style: Block
   unfocused_hollow: true
 
-key_bindings:
+#key_bindings:
 #  - { key: N, mods: Control, action: SpawnNewInstance }
