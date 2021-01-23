@@ -53,6 +53,9 @@ Plug 'mhinz/vim-startify'
 " Helper to close buffers
 Plug 'Asheq/close-buffers.vim'
 
+" Helper to run/execute tests
+Plug 'vim-test/vim-test'
+
 call plug#end()
 
 " Keybindings (that line down)
