@@ -17,3 +17,16 @@ nnoremap <leader>fprod :CocCommand flutter.run --flavor prod -t lib/main_prod.da
 nmap <silent><leader>ca <Plug>(coc-codelens-action)
 vmap <silent><leader>a  <Plug>(coc-codeaction-selected)
 nmap <silent><leader>a  <Plug>(coc-codeaction)
+
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Remap keys for gotos
+nmap <silent> gtd <Plug>(coc-definition)
+nmap <silent> gty <Plug>(coc-type-definition)
+nmap <silent> gti <Plug>(coc-implementation)
+nmap <silent> gtr <Plug>(coc-references)
+
+" Remap for rename current word
+nmap <F2> <Plug>(coc-rename)
