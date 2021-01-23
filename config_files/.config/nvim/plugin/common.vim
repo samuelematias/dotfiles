@@ -47,3 +47,9 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+" CTRL+S Save
+nnoremap <C-s> :w<CR>
+
+" CTRL+SHIFT+Q Save and Close the file
+nnoremap <C-Q> :wq!<CR>
