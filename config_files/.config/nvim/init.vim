@@ -28,6 +28,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } |
             \ Plug 'Xuyuanp/nerdtree-git-plugin' |
+            \ Plug 'tiagofumo/vim-nerdtree-syntax-highlight' |
             \ Plug 'preservim/nerdcommenter' |
             \ Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
