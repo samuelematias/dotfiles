@@ -57,9 +57,6 @@ Plug 'Asheq/close-buffers.vim'
 " Helper to run/execute tests
 Plug 'vim-test/vim-test'
 
-" NERDTree icon file extension colored
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
 call plug#end()
 
 " Keybindings (that line down)
