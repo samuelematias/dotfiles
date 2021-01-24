@@ -14,6 +14,7 @@ sudo chsh -s $(which zsh)
 
 # Set macOS preferences
 # sh $CONFIG_DIR/osx/.default_config
+sh $CONFIG_DIR/osx/.filtered_default_config
 
 # Install non-brew various tools (PRE-BREW Installs)
 echo "Ensuring build/install tools are available"
