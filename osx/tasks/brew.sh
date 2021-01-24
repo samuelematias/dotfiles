@@ -42,7 +42,7 @@ brew tap homebrew/cask
 brew tap homebrew/cask-fonts
 
 # Install font
-brew install --cask font-fira-code
+brew install --cask font-fira-code-nerd-font
 
 # Install useful packages/binaries
 brew install exa
