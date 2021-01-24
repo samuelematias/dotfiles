@@ -50,3 +50,6 @@ endfunction
 
 " CTRL+S Save
 nnoremap <C-s> :w<CR>
+
+" Set Vim font to a Nerd Font
+set guifont=FiraCode\ Nerd\ Font:h15
