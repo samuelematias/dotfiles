@@ -65,9 +65,13 @@ brew install bitwarden-cli
 brew install python
 brew install scrcpy
 brew install tmuxinator
+brew install libtool
+brew install libvterm
 
 # Install cask packages
 brew install --cask alacritty
+brew install --cask emacs
+brew install --cask cmake
 brew install --cask figma
 brew install --cask imageoptim
 brew install --cask slack
