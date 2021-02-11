@@ -61,7 +61,6 @@ brew install tree
 brew install neovim
 brew install yarn
 brew install z
-brew install bitwarden-cli
 brew install python
 brew install scrcpy
 brew install tmuxinator
@@ -76,7 +75,6 @@ brew install --cask figma
 brew install --cask imageoptim
 brew install --cask slack
 brew install --cask spotify
-brew install --cask bitwarden
 brew install --cask 1password
 brew install --cask telegram
 brew install --cask alfred
@@ -87,15 +85,15 @@ brew install --cask vivaldi
 brew install --cask google-chrome
 brew install --cask oracle-jdk
 brew install --cask android-studio
-brew install --cask flutter
 brew install --cask sizeup
 brew install --cask notion
 brew install --cask cleanmymac
-brew install --cask screenfocus
 brew install --cask itsycal
-brew install --cask spotmenu
 brew install --cask discord
 brew install --cask folx
+brew install --cask vlc
+brew install --cask insomnia
+brew install --cask zoom
 
 # Remove outdated versions from the cellar.
 brew cleanup
