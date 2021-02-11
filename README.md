@@ -43,7 +43,7 @@ At the end (after you have run the entire script), if you wanna install [Oh My Z
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-- If you use [powerlevel10k](github.com/romkatv/powerlevel10k) theme (I use!), execute this:
+- If you use [powerlevel10k](https://github.com/romkatv/powerlevel10k#oh-my-zsh) theme (I use!), execute this:
 
 ```bash
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
