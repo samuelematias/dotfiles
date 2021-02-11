@@ -22,6 +22,12 @@ export PATH="$PATH:$ANDROID_HOME/tools"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
 export PATH="$ANDROID_HOME/emulator:$ANDROID_SDK/tools:$PATH"
 
+#Doom Emacs path
+export PATH="$HOME/.emacs.d/bin:$PATH"
+
+#Flutter path
+export PATH="$PATH:$HOME/development/flutter/bin"
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/samuelematias/.oh-my-zsh"
 
