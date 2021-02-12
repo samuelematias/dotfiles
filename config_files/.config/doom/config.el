@@ -140,6 +140,22 @@
       (setq lsp-dart-sdk-dir dart-sdk-path
             lsp-dart-dap-flutter-hot-reload-on-save t))))
 
+;;(use-package! lsp-dart
+;;  :config
+;;  (when-let (dart-exec (executable-find "dart"))
+;;    (let ((dart-sdk-path (-> dart-exec
+;;                            file-chase-links
+;;                             file-name-directory
+;;                             directory-file-name
+;;                             file-name-directory)))
+;;      (setq lsp-dart-sdk-dir dart-sdk-path
+;;            lsp-dart-dap-flutter-hot-reload-on-save t)))
+;;      (dap-register-debug-template "Flutter :: Flavor Dev"
+;;                               (list :flutterPlatform "x86_64"
+;;                                     :type "dart"
+;;                                     :program "lib/main_dev.dart"
+;;                                     :args '("--flavor dev" "-d all"))))
+
 
 ;;(use-package! lsp-dart
 ;;  :config
