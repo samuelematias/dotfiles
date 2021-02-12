@@ -52,4 +52,4 @@ endfunction
 nnoremap <C-s> :w<CR>
 
 " Set Vim font to a Nerd Font
-set guifont=FiraCode\ Nerd\ Font:h15
+set guifont=FiraCode\ Nerd\ Font:h14

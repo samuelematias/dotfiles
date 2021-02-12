@@ -49,7 +49,7 @@
  frame-title-format (setq icon-title-format  ;; set window title with "project"
                           '((:eval (projectile-project-name))))
 
- doom-font (font-spec :family "FiraCode Nerd Font" :size 16)
+ doom-font (font-spec :family "FiraCode Nerd Font" :size 14)
  doom-unicode-font (font-spec :family "Material Design Icons")
  doom-big-font-increment 2
 
