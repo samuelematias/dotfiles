@@ -72,6 +72,10 @@ sh ~/.dotfiles/osx/tasks/zsh_symlink.sh
 ```bash
 source ~/.zshrc
 ```
+
+## Doom Emacs
+
+With Emacs installed, we cannot install the [Doom Emacs](https://github.com/hlissner/doom-emacs) interface, as it gives a nice upgrade to Emacs, so to install, just follow the [Installation instructions](https://github.com/hlissner/doom-emacs#install).
 ## fzf
 
 To enable the FZF in command line you need to follow [this guide](https://github.com/junegunn/fzf#installation).
