@@ -129,32 +129,57 @@
         doom-modeline-vcs-max-length 0
         vc-display-status nil))
 
-(use-package! lsp-dart
+(use-package! flutter
+  :ensure t
+  :after dart-mode
+  :functions (flutter--running-p flutter-hot-reload)
+  :commands (flutter-run-or-hot-reload)
+  :bind (:map dart-mode-map
+              ("C-M-x" . #'flutter-run-or-hot-reload))
   :config
-  (when-let (dart-exec (executable-find "dart"))
-    (let ((dart-sdk-path (-> dart-exec
-                             file-chase-links
-                             file-name-directory
-                             directory-file-name
-                             file-name-directory)))
-      (setq lsp-dart-sdk-dir dart-sdk-path
-            lsp-dart-dap-flutter-hot-reload-on-save t))))
+  (defun flutter-run-flavor-dev-or-hot-reload ()
+    (interactive)
+    (if (flutter--running-p)
+        (flutter-hot-reload)
+      (flutter-run "--flavor dev -t lib/main_dev.dart -d all"))))
 
-;;(use-package! lsp-dart
-;;  :config
-;;  (when-let (dart-exec (executable-find "dart"))
-;;    (let ((dart-sdk-path (-> dart-exec
-;;                            file-chase-links
-;;                             file-name-directory
-;;                             directory-file-name
-;;                             file-name-directory)))
-;;      (setq lsp-dart-sdk-dir dart-sdk-path
-;;            lsp-dart-dap-flutter-hot-reload-on-save t)))
-;;      (dap-register-debug-template "Flutter :: Flavor Dev"
-;;                               (list :flutterPlatform "x86_64"
-;;                                     :type "dart"
-;;                                     :program "lib/main_dev.dart"
-;;                                     :args '("--flavor dev" "-d all"))))
+(defun flutter-run-flavor-dev ()
+  (interactive)
+    (flutter-run "--flavor dev -t lib/main_dev.dart -d all"))
+
+(defun flutter-run-chrome ()
+  (interactive)
+    (flutter-run "-d chrome"))
+
+(defun flutter-run-macos ()
+  (interactive)
+    (flutter-run "-d macos"))
+
+(use-package! lsp-dart
+ :config
+ (when-let (dart-exec (executable-find "dart"))
+   (let ((dart-sdk-path (-> dart-exec
+                           file-chase-links
+                            file-name-directory
+                            directory-file-name
+                            file-name-directory)))
+     (setq lsp-dart-sdk-dir dart-sdk-path
+           lsp-dart-dap-flutter-hot-reload-on-save t)))
+     (dap-register-debug-template "Flutter :: Flavor Dev"
+                              (list :type "flutter"
+                                    :program "lib/main_dev.dart"
+                                    :args '("--flavor" "dev"))))
+
+; (use-package! lsp-dart
+;   :config
+;   (when-let (dart-exec (executable-find "dart"))
+;     (let ((dart-sdk-path (-> dart-exec
+;                              file-chase-links
+;                              file-name-directory
+;                              directory-file-name
+;                              file-name-directory)))
+;       (setq lsp-dart-sdk-dir dart-sdk-path
+;             lsp-dart-dap-flutter-hot-reload-on-save t))))
 
 
 ;;(use-package! lsp-dart
@@ -179,7 +204,7 @@
 ;;(setq dart-server-enable-analysis-server t)
 ;;(add-hook 'dart-server-hook 'flycheck-mode)
 
-(use-package vterm
+(use-package! vterm
   :commands vterm
   :config
   (setq vterm-max-scrollback 10000))
