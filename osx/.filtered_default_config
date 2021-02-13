@@ -30,6 +30,12 @@ defaults write com.apple.dock autohide-time-modifier -float 0
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
+# Set sidebar icon size to medium
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
+
+# Set the icon size of Dock items to 42 pixels
+defaults write com.apple.dock tilesize -int 42
+
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
