@@ -71,10 +71,6 @@ echo "📲 Running Xcode commands..."
 sh $CONFIG_DIR/osx/tasks/xcode.sh
 echo "✅ Successful runned Xcode commands"
 
-echo "ℰ Installing Doom Emacs"
-sh $CONFIG_DIR/osx/tasks/doom_emacs_setup.sh
-echo "✅ Successful installed Doom Emacs"
-
 # Add default apps to Dock
 echo "🖥 Setting apps to Mac dock..."
 sh $CONFIG_DIR/osx/tasks/dock.sh
