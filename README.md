@@ -75,7 +75,9 @@ source ~/.zshrc
 
 ## Doom Emacs
 
-With [Emacs](https://www.gnu.org/software/emacs/) installed, we cannot forget install the [Doom Emacs](https://github.com/hlissner/doom-emacs) interface, as it gives a nice upgrade to Emacs, so to install, just follow the [Installation instructions](https://github.com/hlissner/doom-emacs#install).
+With [Emacs](https://www.gnu.org/software/emacs/) installed, we cannot forget install the [Doom Emacs](https://github.com/hlissner/doom-emacs) interface, as it gives a nice upgrade to [Emacs](https://www.gnu.org/software/emacs/)! 
+<br>
+To install [Doom Emacs](https://github.com/hlissner/doom-emacs), just follow the [Installation instructions](https://github.com/hlissner/doom-emacs#install).
 ## fzf
 
 To enable the FZF in command line you need to follow [this guide](https://github.com/junegunn/fzf#installation).
