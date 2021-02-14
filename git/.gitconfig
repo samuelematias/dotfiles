@@ -41,6 +41,9 @@
   #############
   co = checkout
   cob = checkout -b
+  cod = checkout develop
+  com = checkout main
+  cor = checkout master
   #############
   d = difftool
   df = diff --color --color-words --abbrev
