@@ -25,6 +25,9 @@
                          " ")))
     (counsel-rg symbol (counsel--git-root) args)))
 
+;; Set up the visible bell to dont show
+(setq visible-bell nil)
+
 (setq-default evil-kill-on-visual-paste nil)
 
 (setq
@@ -130,7 +133,6 @@
         vc-display-status nil))
 
 (use-package! flutter
-  :ensure t
   :after dart-mode
   :functions (flutter--running-p flutter-hot-reload)
   :commands (flutter-run-or-hot-reload)
@@ -203,6 +205,21 @@
 ;;(setq dart-server-executable-path "/usr/local/Caskroom/flutter/1.22.5/flutter/bin/cache/dart-sdk")
 ;;(setq dart-server-enable-analysis-server t)
 ;;(add-hook 'dart-server-hook 'flycheck-mode)
+
+;; NOTE: Make sure to configure a GitHub token before using this package!
+;; - https://magit.vc/manual/forge/Token-Creation.html#Token-Creation
+;; - https://magit.vc/manual/ghub/Getting-Started.html#Getting-Started
+(use-package! forge
+  :after magit
+  :config
+  (setq auth-sources '("~/.authinfo")))
+
+(use-package! counsel
+  :bind (("C-M-j" . 'counsel-switch-buffer)
+         :map minibuffer-local-map
+         ("C-r" . 'counsel-minibuffer-history))
+  :config
+  (counsel-mode 1))
 
 (use-package! vterm
   :commands vterm
