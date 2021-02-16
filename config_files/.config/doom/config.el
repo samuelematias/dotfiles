@@ -167,7 +167,7 @@
                             file-name-directory)))
      (setq lsp-dart-sdk-dir dart-sdk-path
            lsp-dart-dap-flutter-hot-reload-on-save t)))
-     (dap-register-debug-template "Flutter :: Flavor Dev"
+     (dap-register-debug-template "Flutter :: Debug Flavor Dev"
                               (list :type "flutter"
                                     :program "lib/main_dev.dart"
                                     :args '("--flavor" "dev"))))
