@@ -28,6 +28,8 @@
 ;; Set up the visible bell to dont show
 (setq visible-bell nil)
 
+(setq display-line-numbers-type 'relative)
+
 (setq-default evil-kill-on-visual-paste nil)
 
 (setq
