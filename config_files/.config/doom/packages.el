@@ -32,6 +32,8 @@
 (package! posframe)
 (package! yaml-mode)
 (package! evil-tutor)
+(package! forge)
+(package! hydra)
 
 (unpin! hover)
 (unpin! doom-modeline)
