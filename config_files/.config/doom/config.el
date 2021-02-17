@@ -208,7 +208,7 @@
 ;;(setq dart-server-enable-analysis-server t)
 ;;(add-hook 'dart-server-hook 'flycheck-mode)
 
-(use-package hydra
+(use-package! hydra
   :defer t)
 
 (defhydra hydra-text-scale (:timeout 4)
