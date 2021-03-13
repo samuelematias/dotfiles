@@ -16,6 +16,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+#Flutter/Dart path
+export FLUTTER_HOME=$HOME/development/flutter
+export PATH="$PATH:$FLUTTER_HOME/bin"
+export PATH="$PATH:$FLUTTER_HOME/bin/cache/dart-sdk"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
 #Android Path
 export ANDROID_HOME=~/Library/Android/sdk
 export PATH="$PATH:$ANDROID_HOME/tools"
@@ -24,9 +30,6 @@ export PATH="$ANDROID_HOME/emulator:$ANDROID_SDK/tools:$PATH"
 
 #Doom Emacs path
 export PATH="$HOME/.emacs.d/bin:$PATH"
-
-#Flutter path
-export PATH="$PATH:$HOME/development/flutter/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/samuelematias/.oh-my-zsh"
