@@ -34,6 +34,7 @@
 (package! evil-tutor)
 (package! forge)
 (package! hydra)
+(package! rainbow-delimiters)
 
 (unpin! hover)
 (unpin! doom-modeline)
