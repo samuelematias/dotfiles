@@ -94,5 +94,4 @@ alias fs="stat -f \"%z bytes\""
 alias rnm="rm -rf node_modules"
 
 # Lock the screen (when going AFK)
-# alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend" #DEPRECATED
 alias afk="osascript -e 'tell application \"System Events\" to keystroke \"q\" using {command down,control down}'"
