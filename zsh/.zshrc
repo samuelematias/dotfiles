@@ -5,16 +5,19 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Add `~/bin` to the `$PATH`
-export PATH="$PATH:/usr/local/bin";
-export PATH="$PATH:$HOME/.rvm/bin"
-export PATH="/usr/local/sbin:$PATH"
-. /usr/local/etc/profile.d/z.sh
-
-# NVM Setup
+eval "$(pyenv init -)"
+source $HOME/.nurc
+# BEGIN ANSIBLE MANAGED BLOCK - GO
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
+# END ANSIBLE MANAGED BLOCK - GO
+# BEGIN ANSIBLE MANAGED BLOCK - NVM
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh"
+# END ANSIBLE MANAGED BLOCK - NVM
+# BEGIN ANSIBLE MANAGED BLOCK - RBENV
+eval "$(rbenv init -)"
+# END ANSIBLE MANAGED BLOCK - RBENV
 
 #Flutter/Dart path
 export FLUTTER_HOME=$HOME/development/flutter
@@ -32,7 +35,7 @@ export PATH="$ANDROID_HOME/emulator:$ANDROID_SDK/tools:$PATH"
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/samuelematias/.oh-my-zsh"
+export ZSH="/Users/samuel.matias/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
@@ -126,11 +129,17 @@ zinit light zsh-users/zsh-completions
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-alias vim=nvim
-alias ls=exa -l
-alias fat='flutter analyze && flutter test'
-alias fwt='ls test/**/*_test.dart | entr -c -d flutter test /_'
-alias python=/usr/local/bin/python3.9
-alias pip=/usr/local/bin/pip3
+# Load our dotfiles like ~/.bash_prompt, etc…
+#   ~/.extra can be used for settings you don’t want to commit,
+#   Use it to configure your PATH, thus it being first in line.
+for file in ~/.{extra,exports,aliases,functions}; do
+    [ -r "$file" ] && source "$file"
+done
+unset file
+
+# here's LS_COLORS
+# github.com/trapd00r/LS_COLORS
+command -v gdircolors >/dev/null 2>&1 && alias dircolors="gdircolors"
+eval "$(dircolors -b ~/.dircolors)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
