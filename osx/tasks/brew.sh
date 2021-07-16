@@ -40,6 +40,7 @@ brew tap homebrew/bundle
 brew tap homebrew/core
 brew tap homebrew/cask
 brew tap homebrew/cask-fonts
+brew tap d12frosted/emacs-plus
 
 # Install font
 brew install --cask font-fira-code-nerd-font
@@ -66,10 +67,11 @@ brew install scrcpy
 brew install tmuxinator
 brew install libtool
 brew install libvterm
+brew install emacs-plus
 
 # Install cask packages
 brew install --cask alacritty
-brew install --cask emacs
+#brew install --cask emacs
 brew install --cask cmake
 brew install --cask figma
 brew install --cask imageoptim
