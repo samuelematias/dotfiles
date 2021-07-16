@@ -1,5 +1,12 @@
 ;;; ~/.doom.d/config.el -*- lexical-binding: t; -*-
 
+;; nu ides emacs config
+(let ((nudev-emacs-path "~/dev/nu/nudev/ides/emacs/"))
+  (when (file-directory-p nudev-emacs-path)
+    (add-to-list 'load-path nudev-emacs-path)
+    (require 'nu nil t)
+    (require 'nu-datomic-query nil t)))
+
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 (add-to-list 'auto-mode-alist '("\\.repl\\'" . clojure-mode))
 (add-to-list 'auto-mode-alist '("\\.ect\\'" . html-mode))
@@ -9,6 +16,7 @@
 (add-hook 'markdown-mode-hook #'turn-off-auto-fill)
 (add-hook 'dart-mode-hook (lambda () (setq left-fringe-width 16)))
 (add-hook 'java-mode-hook (lambda () (setq left-fringe-width 16)))
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
 (defun reverse-transpose-sexps (arg)
     (interactive "*p")
@@ -43,7 +51,7 @@
 
  read-process-output-max (* 1024 1024)
 
- projectile-project-search-path '("~/workspace/" "~/workspace/job/" "~/workspace/personal/" "~/workspace/personal/flutter/" "~/workspace/job/ifood/")
+projectile-project-search-path '("~/dev/" "~/dev/personal/" "~/dev/nu/" "~/dev/nu/mini-meta-repo/packages")
  projectile-enable-caching nil
 
  evil-split-window-below t
@@ -298,3 +306,53 @@
   (add-to-list 'projectile-project-root-files-bottom-up "BUILD"))
 
 (put 'narrow-to-region 'disabled nil)
+
+;;
+;; Key bindings section (bellow)
+;;
+
+(defun format-and-save-current-buffer()
+  (interactive)
+  (format-all-buffer)
+  (save-buffer))
+
+(map! :leader
+      :desc "Switch Buffer" 
+      "j j" 
+      #'counsel-switch-buffer)
+
+;; Previous C-x k
+(map! :leader
+      :desc "Kill Buffer" 
+      "k b" 
+      #'kill-buffer)
+
+(map! :leader
+      :desc "Zoom the Code" 
+      "c z" 
+      #'hydra-text-scale/body)
+
+(map! :leader
+      :desc "Format current buffer" 
+      "f b" 
+      #'format-all-buffer)
+
+;; Previous SPC f s
+(map! :leader
+      :desc "Save buffer" 
+      "f v" 
+      #'save-buffer)
+
+(map! :leader
+      :desc "Format and Save current buffer" 
+      "f s" 
+      #'format-and-save-current-buffer)
+
+;; Previous s-/
+(map! :leader
+      :desc "Comment line" 
+      "] ]" 
+      #'comment-line)
+
+; ;; Make ESC quit prompts
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
