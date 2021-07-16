@@ -1,4 +1,4 @@
-# Easier ways to navigate trough directories
+# Navigate faster
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -6,14 +6,33 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 alias ws="cd $HOME/workspace"
+alias labs="cd $HOME/workspace/labs"
+alias devgo="cd $HOME/dev"
+alias nugo="cd $HOME/dev/nu"
+
+# Find Aliases
+alias al="less ~/.aliases"
+alias alf="less ~/.aliases | grep"
+alias gal="g al"
+alias gaf="g al | grep"
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
-# Brew
-alias cask='brew cask' # i <3 u cask
+# Empty Downloads on macOS
+alias dclean="cd ~/Downloads; rm -fr *;cd -"
 
-# ls substitute
+# Brew
+alias b="brew"
+alias bt="brew tap"
+alias bi="brew install"
+alias brm="brew uninstall"
+alias bu="brew -v update; brew upgrade --force-bottle; brew cleanup; brew doctor"
+alias bc='brew install --cask'
+
+# ls overwrite by exa
+# https://the.exa.website/
+alias l='exa'
 alias ls='exa'
 alias ll='exa -l'
 alias lll='exa -l | less'
@@ -21,23 +40,59 @@ alias lla='exa -la'
 alias llt='exa -T'
 alias llfu='exa -bghHliS --git'
 
-# Shortcuts
+# Net
+alias iplocal="ipconfig getifaddr en0"
+alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
+
+# Git
 alias g="git"
-alias v="vim"
+
+# {n}vim
+alias v="nvim"
+alias vim="nvim"
+
+# Flutter
+alias fat="flutter analyze && flutter test"
+alias fwt="ls test/**/*_test.dart | entr -c -d flutter test /_"
+
+# Python
+alias python="/usr/local/bin/python3.9"
+alias pip="/usr/local/bin/pip3"
+
+# Stuffs
+alias pipes="( cd "/usr/local" && pipes.sh )"
+
+# Yarn
+alias y="yarn"
+alias yui="yarn upgrade-interactive"
+alias yuil="yarn upgrade-interactive --latest"
+
+# Docker
+alias d="docker"
+alias dr="docker run"
+alias drd="docker run -d"
+alias di="docker images"
+alias dri="docker rmi"
+alias dp="docker ps"
+alias dpa="docker ps -a"
+alias dsp="docker system prune --all"
+alias drf='docker rm $(docker ps -a -q) -f'
+
+## Docker Compose
+alias dc="docker-compose"
+alias dcu="docker-compose up"
+alias dcud="docker-compose up -d"
+alias dcufb="docker-compose up --force-recreate --build"
+alias dcd="docker-compose down"
+alias dcl="docker-compose logs --tail=all | grep"
+alias dcdri="docker-compose down --rmi all --remove-orphans"
 
 # File size
 alias fs="stat -f \"%z bytes\""
 
-# Clear current node_modules
-alias clearnodemodules="rm -rf node_modules"
-
-# Update installed Ruby gems, Homebrew, npm, and their installed packages
-alias brewupdate="brew -v update; brew upgrade --force-bottle; brew cleanup; brew doctor"
-
-# Turn on/off sound
-# http://xkcd.com/530/
-alias stfu="osascript -e 'set volume output muted true'"
-alias pumpitup="osascript -e 'set volume output volume 100'"
+# Clear projects node_modules
+alias rnm="rm -rf node_modules"
 
 # Lock the screen (when going AFK)
-alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+# alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend" #DEPRECATED
+alias afk="osascript -e 'tell application \"System Events\" to keystroke \"q\" using {command down,control down}'"
